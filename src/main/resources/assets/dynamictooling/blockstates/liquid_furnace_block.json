@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "dynamictooling:block/liquid_furnace_block"
+    }
+  }
+}

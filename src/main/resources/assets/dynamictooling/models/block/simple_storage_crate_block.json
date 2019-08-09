@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "dynamictooling:block/simple_storage_crate_block"
+  }
+}

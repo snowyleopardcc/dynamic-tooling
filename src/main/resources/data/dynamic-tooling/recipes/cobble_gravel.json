@@ -1,0 +1,7 @@
+{
+	"type": "dynamic-tooling:manual_mill",
+	"ingredient": "minecraft:cobblestone",
+	"result": "minecraft:gravel",
+	"count": 2,
+	"duration": 60
+}

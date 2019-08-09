@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "dynamictooling:block/simple_storage_crate_block"
+    }
+  }
+}

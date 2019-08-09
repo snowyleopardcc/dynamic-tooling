@@ -1,0 +1,16 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    
+    "layer0": "dynamictooling:item/hardwood_handle",
+    "layer1": "dynamictooling:item/iron_excavator_head"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "dynamictooling:is_broken": 1
+      },
+      "model": "dynamictooling:item/hardwood_handle_item"
+    }
+  ]
+}

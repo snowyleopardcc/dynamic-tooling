@@ -1,0 +1,49 @@
+{
+	
+	"itemGroup.dynamictooling.dynamic_tooling": "Extended Tooling",
+	
+	"item.dynamictooling.diamond_excavator_item": "Diamond Excavator",
+	"item.dynamictooling.gold_excavator_item": "Gold Excavator",
+	"item.dynamictooling.iron_excavator_item": "iron Excavator",
+	"item.dynamictooling.stone_excavator_item": "Stone Excavator",
+	
+	
+	"item.dynamictooling.diamond_miners_delight_item": "Diamond Miner's Delight",
+	"item.dynamictooling.gold_miners_delight_item": "Gold Miner's Delight",
+	"item.dynamictooling.iron_miners_delight_item": "Iron Miner's Delight",
+	"item.dynamictooling.stone_miners_delight_item": "Stone Miner's Delight",
+
+	
+	"item.dynamictooling.diamond_hammer_item": "Diamond Hammer",
+	"item.dynamictooling.gold_hammer_item": "Gold Hammer",
+	"item.dynamictooling.iron_hammer_item": "Iron Hammer",
+	"item.dynamictooling.stone_hammer_item": "Stone Hammer",
+	
+	
+	"item.dynamictooling.diamond_adze_item": "Diamond Adze",
+	"item.dynamictooling.gold_adze_item": "Gold Adze",
+	"item.dynamictooling.iron_adze_item": "Iron Adze",
+	"item.dynamictooling.stone_adze_item": "Stone Adze",
+	
+	"text.dynamictooling.durability": "Durability: %d",
+	"text.dynamictooling.damage": "Damage: %d",
+	"text.dynamictooling.mining_speed": "Mining Speed: %d",
+	"text.dynamictooling.mining_level": "Mining Level: %d",
+	"text.dynamictooling.tool_health": "Tool Health: %f%% ",
+	
+	"text.dynamictooling.adze_tooltip": "Strips a 3x3 area of logs,  and or wood.",
+	"text.dynamictooling.md_tooltip": "Mines a 1x3 vein,  and places torches with right click.",
+	
+	"block.dynamictooling.rsc_block": "Redstone Crafter",
+	"block.dynamictooling.rsc_set_recipe": "Set Recipe",
+	"block.dynamictooling.simple_storage_crate_block": "Simple Storage Crate",
+	"block.dynamictooling.manual_mill_block": "Manual Mill",
+	
+	
+	"enchantment.dynamictooling.knockback_extended": "Knockback,  now with more derp!"
+	
+
+
+
+
+}

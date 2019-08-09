@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "dynamictooling:block/rs_crafter_block"
+    }
+  }
+}

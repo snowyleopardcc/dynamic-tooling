@@ -1,0 +1,18 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "dynamictooling:lawn_light_block"
+		},
+		{
+			"item": "dynamictooling:lawn_light_block"
+		},
+		{
+			"item": "dynamictooling:lawn_light_block"
+		}
+	],
+	"result": {
+		"item": "dynamictooling:lawn_light_slab_block",
+		"count": 3
+	}
+}

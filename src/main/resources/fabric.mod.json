@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "dynamic-tooling",
+  "version": "${version}",
+
+  "name": "Dynamic Tooling",
+  "description": "Dynamic Tools and oddities and more!",
+  "authors": [
+    "Me!"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+
+  "license": "CC0-1.0",
+  "icon": "assets/modid/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.dynamic.tooling.DynamicTooling"
+    ],
+    "client": [
+      "net.dynamic.tooling.DynamicToolingClient"
+    ]
+  },
+  "mixins": [
+
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.4.0",
+    "fabric": "*"
+  },
+  "suggests": {
+    "flamingo": "*"
+  }
+}

@@ -1,0 +1,109 @@
+plugins {
+	id 'fabric-loom' version '0.2.4-SNAPSHOT'
+}
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+
+archivesBaseName = project.archives_base_name
+version = project.mod_version
+group = project.maven_group
+
+repositories {
+	jcenter()
+	maven {
+		name = "Fabric"
+		url = "http://maven.fabricmc.net"
+	}
+	maven {
+		name = "Cotton (Snapshot)"
+		url = "http://server.bbkr.space:8081/artifactory/libs-snapshot"
+	}
+	maven {
+		name = "Cotton"
+		url "http://server.bbkr.space:8081/artifactory/libs-release"
+	}
+	maven {
+		name = "BuildCraft"
+		url = "https://mod-buildcraft.com/maven"
+	}
+	maven {
+		name = "BuildCraft"
+		url = "https://minecraft.curseforge.com/api/maven"
+	}
+}
+
+dependencies {
+	//to change the versions see the gradle.properties file
+	minecraft "com.mojang:minecraft:${project.minecraft_version}"
+	mappings "net.fabricmc:yarn:${project.yarn_mappings}"
+	modCompile "net.fabricmc:fabric-loader:${project.loader_version}"
+
+	// Fabric API. This is technically optional, but you probably want it anyway.
+	modApi "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+
+	modApi "alexiil.mc.lib:libblockattributes-all:0.4.9"
+	modApi "io.github.cottonmc:LibGui:1.2.5"
+//	modApi "io.github.cottonmc.cotton:cotton-config:1.0.0-rc.1"
+//	modApi "io.github.cottonmc.cotton:cotton-datapack:1.0.0-rc.1"
+//	modCompile "io.github.cottonmc:cotton-resources:1.4.0+1.14.4"
+	modCompile ("io.github.cottonmc:cotton-resources:1.4.0+1.14.4") { transitive=false}
+	include "alexiil.mc.lib:libblockattributes-all:0.4.9"
+//	modCompile files("libs/libblockattributes-all-0.4.9.jar")
+	include "io.github.cottonmc:LibGui:1.2.5"
+
+
+}
+
+processResources {
+	inputs.property "version", project.version
+
+	from(sourceSets.main.resources.srcDirs) {
+		include "fabric.mod.json"
+		expand "version": project.version
+	}
+
+	from(sourceSets.main.resources.srcDirs) {
+		exclude "fabric.mod.json"
+	}
+}
+
+// ensure that the encoding is set to UTF-8, no matter what the system default is
+// this fixes some edge cases with special characters not displaying correctly
+// see http://yodaconditions.net/blog/fix-for-java-file-encoding-problems-with-gradle.html
+tasks.withType(JavaCompile) {
+	options.encoding = "UTF-8"
+}
+
+// Loom will automatically attach sourcesJar to a RemapSourcesJar task and to the "build" task
+// if it is present.
+// If you remove this task, sources will not be generated.
+task sourcesJar(type: Jar, dependsOn: classes) {
+	classifier = "sources"
+	from sourceSets.main.allSource
+}
+
+jar {
+	from "LICENSE"
+}
+
+// configure the maven publication
+// publishing {
+// 	publications {
+// 		mavenJava(MavenPublication) {
+// 			// add all the jars that should be included when publishing to maven
+// 			artifact(jar) {
+// 				builtBy remapJar
+// 			}
+// 			artifact(sourcesJar) {
+// 				builtBy remapSourcesJar
+// 			}
+// 		}
+// 	}
+
+// 	// select the repositories you want to publish to
+// 	repositories {
+// 		// uncomment to publish to the local maven
+// 		// mavenLocal()
+// 	}
+// }

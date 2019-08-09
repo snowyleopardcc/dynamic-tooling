@@ -1,0 +1,79 @@
+            if (recipe != null && getOn() && canOutput(recipe.getOutput())) {
+
+                /**
+                 *
+                 *  1.)  Is there a valid recipe?
+                 *  2.)  What ingredients do we need?
+                 *          --  Shape is not important,  only Items and Quantities.
+                 *  3.)  What is available in the input?
+                 *  4.)  For each ingredient,  check if there is enough in input.
+                 *  5.)  If there is enough to craft,  go through and subtract quantities.
+                 *  6.)  Finally set output of recipe to first available output slot.
+                 */
+
+                /** consolidated listing of ingredients --
+                 * each Item Stack has correct count (or should...?)
+                 */
+                DefaultedList<ItemStack> ingredients = INVENTORY.getIngredients();
+
+                /** Now we're checking each ingredients availability */
+                boolean isCraftable = false;
+
+                for (ItemStack ingredient : ingredients) {
+
+                    if (!ingredient.isEmpty()) {
+
+                        isCraftable = INVENTORY.hasIngredient(ingredient);
+                    }
+                }
+
+                if (isCraftable) {
+
+                    for (int idx = 0; idx < ingredients.size(); idx++) {
+
+                        if (!ingredients.get(idx).isEmpty()) {
+
+                            INVENTORY.takeItemStack(ingredients.get(idx));
+                        }
+                    }
+
+
+                    /** get copy of recipe output,  the count
+                     * can be a bit weird and glitchy,  so
+                     * we're double checking it.
+                     */
+                    ItemStack output = recipe.getOutput().copy();
+                    output.setCount(recipe.getOutput().getCount());
+
+
+                    /** go through output slots and find first available */
+                    for (int idx = 9; idx < 17; idx++) {
+
+                        ItemStack current = INVENTORY.getInvStack(idx).copy();
+
+                        if (current.isEmpty()) {
+                            INVENTORY.setInvStack(idx, output);
+                            markDirty();
+                            break;
+                        } else if (current.getItem() == output.getItem()) {
+
+                            int c1 = current.getCount();
+                            int c2 = output.getCount();
+//                            ( (current.getCount() + output.getCount()) < ) )
+                            int c3 = current.getItem().getMaxCount();
+                            if ((c1 + c2) <= c3) {
+
+                                /** some serious weirdness going on here ....*/
+
+//                        current.increment(output.getCount());
+                                current.increment(output.getCount());
+                                INVENTORY.setInvStack(idx, current);
+                                markDirty();
+                                break;
+                            }
+                        } else {
+                            continue;
+                        }
+                    }
+                }
+            }

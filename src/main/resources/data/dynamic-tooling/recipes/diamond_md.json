@@ -1,0 +1,23 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"#T#",
+		"#/ ",
+		" / "
+	],
+	"key": {
+		"#": {
+			"item": "minecraft:diamond"
+		},
+		"T": {
+			"item": "minecraft:torch"
+		},
+		"/": {
+			"item": "minecraft:stick"
+		}
+	},
+	"result": {
+		"item": "dynamictooling:diamond_miners_delight_item",
+		"count": 1
+	}
+}

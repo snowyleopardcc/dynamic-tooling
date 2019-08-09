@@ -1,0 +1,13 @@
+{
+	"variants": {
+		"type=bottom": {
+			"model": "dynamictooling:block/glass_slab"
+		},
+		"type=top": {
+			"model": "dynamictooling:block/glass_slab_top"
+		},
+		"type=double": {
+			"model": "dynamictooling:block/lawn_light_block"
+		}
+	}
+}
