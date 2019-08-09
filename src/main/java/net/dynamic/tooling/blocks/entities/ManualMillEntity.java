@@ -112,7 +112,7 @@ public class ManualMillEntity extends BlockEntity implements BlockEntityClientSe
 
                         if(!INVENTORY.getInvStack(slot).isEmpty()) {
 
-                            if(INVENTORY.getInvStack(slot).getItem().getName().equals(recipe.getOutput().getItem().getName())) {
+                            if(INVENTORY.getInvStack(slot).getItem() == recipe.getOutput().getItem()) {
 
                                 INVENTORY.getInvStack(slot).increment(recipe.getCount());
                                 break;
