@@ -1,0 +1,8 @@
+{
+	"variants": {
+		"facing=north": { "model": "dynamictooling:block/fly_wheel_block",  "x": 270,  "y": 0   },
+		"facing=east": { "model": "dynamictooling:block/fly_wheel_block",   "x": 270, "y": 90  },
+		"facing=south": { "model": "dynamictooling:block/fly_wheel_block",  "x": 270, "y": 180  },
+		"facing=west": { "model": "dynamictooling:block/fly_wheel_block",   "x": 270, "y": 270  }
+	}
+}

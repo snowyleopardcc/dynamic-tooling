@@ -1,0 +1,8 @@
+{
+	"variants": {
+		"facing=north": { "model": "dynamictooling:block/press_bench",  "y": 0   },
+		"facing=east": { "model": "dynamictooling:block/press_bench",   "y": 90  },
+		"facing=south": { "model": "dynamictooling:block/press_bench",  "y": 180  },
+		"facing=west": { "model": "dynamictooling:block/press_bench",   "y": 270  }
+	}
+}

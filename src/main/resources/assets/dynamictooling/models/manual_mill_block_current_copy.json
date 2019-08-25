@@ -1,10 +1,9 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "minecraft:block/acacia_planks",
-		"1": "minecraft:block/black_concrete_powder",
-		"2": "minecraft:block/iron_block",
-		"particle": "assets/acacia_planks"
+		"0": "fabric assets/acacia_planks",
+		"1": "fabric assets/black_concrete_powder",
+		"particle": "fabric assets/acacia_planks"
 	},
 	"elements": [
 		{
@@ -161,30 +160,6 @@
 				"west": {"uv": [0, 0, 6, 12], "texture": "#0"},
 				"up": {"uv": [0, 0, 6, 6], "texture": "#0"},
 				"down": {"uv": [0, 0, 6, 6], "texture": "#0"}
-			}
-		},
-		{
-			"from": [0, 7, 7],
-			"to": [16, 9, 9],
-			"faces": {
-				"north": {"uv": [0, 0, 16, 2], "texture": "#2"},
-				"east": {"uv": [0, 0, 2, 2], "texture": "#2"},
-				"south": {"uv": [0, 0, 16, 2], "texture": "#2"},
-				"west": {"uv": [0, 0, 2, 2], "texture": "#2"},
-				"up": {"uv": [0, 0, 16, 2], "texture": "#2"},
-				"down": {"uv": [0, 0, 16, 2], "texture": "#2"}
-			}
-		},
-		{
-			"from": [7, 7, 0],
-			"to": [9, 9, 16],
-			"faces": {
-				"north": {"uv": [0, 0, 2, 2], "texture": "#2"},
-				"east": {"uv": [0, 0, 16, 2], "texture": "#2"},
-				"south": {"uv": [0, 0, 2, 2], "texture": "#2"},
-				"west": {"uv": [0, 0, 16, 2], "texture": "#2"},
-				"up": {"uv": [0, 0, 2, 16], "texture": "#2"},
-				"down": {"uv": [0, 0, 2, 16], "texture": "#2"}
 			}
 		},
 		{

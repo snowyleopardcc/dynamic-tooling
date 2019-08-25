@@ -1,0 +1,33 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"0": "Documents/charcoal_base_texture",
+		"particle": "Documents/charcoal_base_texture"
+	},
+	"elements": [
+		{
+			"from": [7, 1, 7],
+			"to": [9, 16, 9],
+			"faces": {
+				"north": {"uv": [2, 2, 4, 17], "texture": "#0"},
+				"east": {"uv": [0, 2, 2, 17], "texture": "#0"},
+				"south": {"uv": [6, 2, 8, 17], "texture": "#0"},
+				"west": {"uv": [4, 2, 6, 17], "texture": "#0"},
+				"up": {"uv": [4, 2, 2, 0], "texture": "#0"},
+				"down": {"uv": [6, 0, 4, 2], "texture": "#0"}
+			}
+		},
+		{
+			"from": [5, 0, 5],
+			"to": [11, 1, 11],
+			"faces": {
+				"north": {"uv": [6, 6, 12, 7], "texture": "#0"},
+				"east": {"uv": [0, 6, 6, 7], "texture": "#0"},
+				"south": {"uv": [18, 6, 24, 7], "texture": "#0"},
+				"west": {"uv": [12, 6, 18, 7], "texture": "#0"},
+				"up": {"uv": [12, 6, 6, 0], "texture": "#0"},
+				"down": {"uv": [18, 0, 12, 6], "texture": "#0"}
+			}
+		}
+	]
+}

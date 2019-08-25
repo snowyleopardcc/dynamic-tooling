@@ -1,0 +1,23 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"#G#",
+		"GIG",
+		"#G#"
+	],
+	"key": {
+		"#": {
+			"item": "c:zinc_plate"
+		},
+		"I": {
+			"item": "c:iron_gear"
+		},
+		"G": {
+			"item": "minecraft:glass_pane"
+		}
+	},
+	"result": {
+		"item": "dynamictooling:machine_casing",
+		"count": 1
+	}
+}
